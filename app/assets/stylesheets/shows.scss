@@ -1,0 +1,57 @@
+// Place all the styles related to the shows controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+.flex-container {
+  margin: auto;
+  max-width: 1000px;
+  
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;  
+}
+
+.flex-col-full {
+  position: relative;
+  display: inline-block;
+  margin: 1%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 95%;
+  
+}
+
+.flex-col-half {
+  margin: 1%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 45%;
+  max-width: 400px;
+  background-color: $bg-primary;
+}
+
+.hero-text {
+  position: absolute;
+  padding: 2%;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.hero-image {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+  min-width: 300px;
+}

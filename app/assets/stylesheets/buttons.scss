@@ -1,0 +1,12 @@
+@import "colors";
+
+button, button a {
+  background-color: $button-bg-primary;
+  padding: 1%;
+  margin: .5%;
+  border: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}

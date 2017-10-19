@@ -1,0 +1,28 @@
+.shows-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  justify-content: space-around;
+}
+
+.shows-grid-row {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid black;
+}
+
+.shows-grid-item-whole {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  border-left: 1px solid black;
+}
+
+.shows-grid-item-half {
+  flex-grow: .5;
+  flex-shrink: 5;
+  flex-basis: 12.5%;
+  border-left: 1px solid black;
+}

@@ -1,0 +1,23 @@
+<h1>Admin Panel</h1>
+
+<div class="shows-grid">
+
+  <div class="shows-grid-row">
+    <span class="shows-grid-item-whole"><em>Title asc|desc</em></span>
+    <span class="shows-grid-item-whole"><em>Status</em></span>
+    <span class="shows-grid-item-half"><em>Published On</em></span>
+    <span class="shows-grid-item-half"><em>Edit</em></span>
+  </div>
+
+  <% @shows.each do |show| %>
+    
+    <div class="shows-grid-row">
+      <span class="shows-grid-item-whole"><%= show.title %></span>
+      <span class="shows-grid-item-whole"><%= show.status %></span>
+      <span class="shows-grid-item-half"><%= show.published_on.strftime("%m/%d/%Y %I:%M") %></span>
+      <span class="shows-grid-item-half"><%= link_to "Edit", edit_show_path(show) %></span>
+    </div>
+
+  <% end %>
+
+</div>

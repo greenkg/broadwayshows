@@ -1,0 +1,55 @@
+
+<div class='flex-container'>
+  <div class='flex-grid'>
+
+    <div class="flex-col-full">
+      <h1 class="hero-text">Broadway</h1>
+      <%= image_tag('hero-manhattan-skyline.jpg', class: "hero-image image-responsive") %>
+    </div>
+
+    <div class="flex-col-full">
+      <h2>Find a show or <button>See All Shows</button></h2>
+      <form>
+        <p>When are you going?</p>
+          <button>Soon--this week</button>
+          <button>Next month</button>
+          <button>Sometime in the next few months</button>
+          <button>Whenever</button>
+        <p>Will you be bringing kids to the show?</p>
+          <button>Yes, little kids (under age 12)</button>
+          <button>Yes, older kids (over age 12)</button>
+          <button>Yes, little kids and older kids</button>
+          <button>No kids</button>
+        <p>Any particular genre?</p>
+          <button>Comedy</button>
+          <button>Musical</button>
+          <button>Drama</button>
+          <button>Thriller</button>
+      </form>
+    </div>
+
+    <% @shows.each do |show| %>
+
+      <div class="flex-col-half">
+        <%= image_tag(show.image_file_name, class: "image-responsive")  %>
+      </div>
+      <div class="flex-col-half">
+        <div>
+          <h2><%= show.title %></h2>
+          <p>Genre: <%= show.genre %></p>
+          <p>Kid Friendly? <%= show.kid_friendly %></p>
+          <p>Buy tickets <%= show.in_advance %> in advance.</p>
+        </div>
+        <div>
+          <h4>Summary</h4>
+          <%= show.summary %>
+        </div>
+        <p>
+          <button><%= link_to "Read more", show %></button>
+        </p>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image_file_name: MyString
+  summary: MyText
+  review: MyText
+  in_advance: MyString
+  kid_friendly: false
+  genre: MyString
+  status: MyString
+
+two:
+  title: MyString
+  image_file_name: MyString
+  summary: MyText
+  review: MyText
+  in_advance: MyString
+  kid_friendly: false
+  genre: MyString
+  status: MyString

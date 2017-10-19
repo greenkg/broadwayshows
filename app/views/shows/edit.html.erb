@@ -1,0 +1,38 @@
+Editing: <%= @show.title %>
+
+<%= form_for(@show) do |f| %>
+  <fieldset>
+    Published posts are visible on your site.
+    Draft posts are saved, so you can edit them later, but they are not visible to the public.
+    <p><%= f.label "Publish?" %></p>
+    <p><%= f.text_field :status %></p>
+  </fieldset>
+
+  <fieldset>
+    About the show
+    <p><%= f.label :title %></p>
+    <p><%= f.text_field :title %></p>
+    <p><%= f.label :image_file_name %></p>
+    <p><%= f.text_field :image_file_name %></p>
+    <p><%= f.label :summary %></p>
+    <p><%= f.text_area :summary %></p>
+    <p><%= f.label :review %></p>
+    <p><%= f.text_area :review %></p>
+  </fieldset>
+
+  <fieldset>
+    Filtering factors
+    <p><%= f.label "How far in advance must tickets be purchased?" %></p>
+    <p><%= f.text_field :in_advance %></p>
+    <p><%= f.label "Is the show kid friendly?" %></p>
+    <p><%= f.text_field :kid_friendly %></p>
+    <p><%= f.label "What genre is the show?" %></p>
+    <p><%= f.text_area :genre %></p>
+  </fieldset>
+
+  <fieldset>
+    <%= f.button(type: "submit") %>
+    <button>Cancel</button>
+  </fieldset>
+
+<% end %>
